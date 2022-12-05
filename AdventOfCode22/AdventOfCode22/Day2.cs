@@ -14,15 +14,15 @@ namespace AdventOfCode22
 
             int totalScore = 0;
 
-            for (int i = 0; i < originalInput.Count(); i++)
-            {
-                string opponentMove = originalInput[i].Split(" ")[0];
-                string myMove = originalInput[i].Split(" ")[1];
+            //for (int i = 0; i < originalInput.Count(); i++)
+            //{
+            //    string opponentMove = originalInput[i].Split(" ")[0];
+            //    string myMove = originalInput[i].Split(" ")[1];
 
-                int selectedShapePoint = mapShape(myMove);
+            //    int selectedShapePoint = mapShape(myMove);
 
-                totalScore += (selectedShapePoint + RockPaperScissor(myMove, opponentMove));
-            }
+            //    totalScore += (selectedShapePoint + RockPaperScissor(myMove, opponentMove));
+            //}
 
             return totalScore;
         }
@@ -33,15 +33,15 @@ namespace AdventOfCode22
 
             int totalScore = 0;
 
-            for (int i = 0; i < originalInput.Count(); i++)
-            {
-                string opponentMove = originalInput[i].Split(" ")[0];
-                string myMove = GetMove(originalInput[i].Split(" ")[1], opponentMove);
+            //for (int i = 0; i < originalInput.Count(); i++)
+            //{
+            //    string opponentMove = originalInput[i].Split(" ")[0];
+            //    string myMove = GetMove(originalInput[i].Split(" ")[1], opponentMove);
 
-                int selectedShapePoint = mapShape(myMove);
+            //    int selectedShapePoint = mapShape(myMove);
 
-                totalScore += (selectedShapePoint + RockPaperScissor(myMove, opponentMove));
-            }
+            //    totalScore += (selectedShapePoint + RockPaperScissor(myMove, opponentMove));
+            //}
 
             return totalScore;
         }

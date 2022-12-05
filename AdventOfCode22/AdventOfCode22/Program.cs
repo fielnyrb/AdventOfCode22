@@ -10,8 +10,8 @@ namespace AdventOfCode22
         static void Main(string[] args)
         {
             Day5 d = new Day5();
-            Console.WriteLine(d.Part1());
-            //Console.WriteLine(d.Part2());
+            //Console.WriteLine(d.Part1());
+            Console.WriteLine(d.Part2());
         }
     }
 }

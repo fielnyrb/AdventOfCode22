@@ -22,16 +22,16 @@ namespace AdventOfCode22
             {
 
                 string[] pair = originalInput[i].Split(',');
-                //int pair1Assignment1 = int.Parse(pair[0].Split("-")[0]);
-                //int pair1Assignment2 = int.Parse(pair[0].Split("-")[1]);
-                //int pair2Assignment1 = int.Parse(pair[1].Split("-")[0]);
-                //int pair2Assignment2 = int.Parse(pair[1].Split("-")[1]);
+                int pair1Assignment1 = int.Parse(pair[0].Split('-')[0]);
+                int pair1Assignment2 = int.Parse(pair[0].Split('-')[1]);
+                int pair2Assignment1 = int.Parse(pair[1].Split('-')[0]);
+                int pair2Assignment2 = int.Parse(pair[1].Split('-')[1]);
 
-                //if ((pair1Assignment1 <= pair2Assignment1 && pair1Assignment2 >= pair2Assignment2) ||
-                //    (pair2Assignment1 <= pair1Assignment1 && pair2Assignment2 >= pair1Assignment2))
-                //{
-                //    overlaps++;
-                //}
+                if ((pair1Assignment1 <= pair2Assignment1 && pair1Assignment2 >= pair2Assignment2) ||
+                    (pair2Assignment1 <= pair1Assignment1 && pair2Assignment2 >= pair1Assignment2))
+                {
+                    overlaps++;
+                }
             }
 
             return overlaps;
@@ -40,20 +40,20 @@ namespace AdventOfCode22
         public int Part2()
         {
             int overlaps = 0;
-            //for (int i = 0; i < originalInput.Count; i++)
-            //{
-            //    string[] pair = originalInput[i].Split(",");
-            //    int pair1Assignment1 = int.Parse(pair[0].Split("-")[0]);
-            //    int pair1Assignment2 = int.Parse(pair[0].Split("-")[1]);
-            //    int pair2Assignment1 = int.Parse(pair[1].Split("-")[0]);
-            //    int pair2Assignment2 = int.Parse(pair[1].Split("-")[1]);
+            for (int i = 0; i < originalInput.Count; i++)
+            {
+                string[] pair = originalInput[i].Split(',');
+                int pair1Assignment1 = int.Parse(pair[0].Split('-')[0]);
+                int pair1Assignment2 = int.Parse(pair[0].Split('-')[1]);
+                int pair2Assignment1 = int.Parse(pair[1].Split('-')[0]);
+                int pair2Assignment2 = int.Parse(pair[1].Split('-')[1]);
 
-            //    if ((pair1Assignment1 <= pair2Assignment1 && pair1Assignment2 >= pair2Assignment1) ||
-            //        (pair2Assignment1 <= pair1Assignment1 && pair2Assignment2 >= pair1Assignment1))
-            //    {
-            //        overlaps++;
-            //    }
-            //}
+                if ((pair1Assignment1 <= pair2Assignment1 && pair1Assignment2 >= pair2Assignment1) ||
+                    (pair2Assignment1 <= pair1Assignment1 && pair2Assignment2 >= pair1Assignment1))
+                {
+                    overlaps++;
+                }
+            }
 
             return overlaps;
         }

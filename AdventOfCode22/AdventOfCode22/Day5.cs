@@ -130,5 +130,42 @@ namespace AdventOfCode22
 
             return finalStackTopArrangement;
         }
+
+        public string Part2()
+        {
+            string finalStackTopArrangement = "";
+
+            for (int i = 10; i < originalInput.Count; i++)
+            {
+                int amount = Int32.Parse(originalInput[i].Split(' ')[1]);
+                int source = Int32.Parse(originalInput[i].Split(' ')[3]);
+                int target = Int32.Parse(originalInput[i].Split(' ')[5]);
+
+                List<string> poppedCrates = new List<string>();
+
+                while (amount > 0)
+                {
+                    string stackContent = stacksOfCrates[source - 1].Pop();
+                    poppedCrates.Add(stackContent);
+
+                    amount--;
+                }
+                poppedCrates.Reverse();
+
+                for (int j = 0; j < poppedCrates.Count; j++)
+                {
+                    stacksOfCrates[target - 1].Push(poppedCrates[j]);
+                }
+
+
+            }
+
+            for (int i = 0; i < stacksOfCrates.Count; i++)
+            {
+                finalStackTopArrangement += stacksOfCrates[i].Peek();
+            }
+
+            return finalStackTopArrangement;
+        }
     }
 }

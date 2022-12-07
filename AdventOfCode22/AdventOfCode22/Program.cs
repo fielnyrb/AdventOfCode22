@@ -11,7 +11,7 @@ namespace AdventOfCode22
         {
             Day7 d = new Day7();
             Console.WriteLine(d.Part1());
-            //Console.WriteLine(d.Part2());
+            Console.WriteLine(d.Part2());
         }
     }
 }
